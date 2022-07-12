@@ -52,7 +52,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{route('presensi-keluar')}}" class="nav-link">
                                 <i class="far fa-user"></i>
                                 <p>Presensi Keluar</p>
                             </a>
@@ -71,7 +71,7 @@
                     <ul class="nav nav-treeview">
                         @if (auth()->user()->level=="mahasiswa")
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Presensi Mahasiswa</p>
                             </a>

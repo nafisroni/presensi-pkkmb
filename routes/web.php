@@ -22,5 +22,9 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin,mahasiswa']], function ()
 
 Route::group(['middleware' => ['auth', 'ceklevel:admin,mahasiswa']], function () {
     Route::post('/simpan-masuk', [PresensiController::class, 'store'])->name('simpan-masuk');
+    Route::post('/ubah=presensi', [PresensiController::class, 'presensipulang'])->name('ubah-presensi');
     Route::get('/presensi-masuk', [PresensiController::class, 'index'])->name('presensi-masuk');
+    Route::get('/presensi-keluar', [PresensiController::class, 'keluar'])->name('presensi-keluar');
+    Route::get('filter-data', [PresensiController::class, 'halamanrekap'])->name('filter-data');
+    Route::get('filter-data/{tglawal}/{tglakhir}', [PresensiController::class, 'tampildatakeseluruhan'])->name('filter-data-keseluruhan');
 });
